@@ -87,7 +87,7 @@ private fun findContours(src: Mat): List<MatOfPoint> {
 
     Imgproc.cvtColor(src, grayImage, Imgproc.COLOR_BGR2GRAY)
     Imgproc.GaussianBlur(grayImage, grayImage, Size(5.0, 5.0), 0.0)
-    Imgproc.threshold(grayImage, grayImage, 20.0, 255.0, Imgproc.THRESH_TRIANGLE)
+    Imgproc.threshold(grayImage, grayImage, 70.0, 255.0, Imgproc.THRESH_TRIANGLE)
     Imgproc.Canny(grayImage, cannedImage, 75.0, 200.0)
     Imgproc.dilate(cannedImage, dilate, kernel)
     val contours = ArrayList<MatOfPoint>()
